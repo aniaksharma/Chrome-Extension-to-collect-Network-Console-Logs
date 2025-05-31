@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 10px; width: 200px; }
+    button { margin: 5px 0; width: 100%; padding: 10px; }
+    #logSize { margin-top: 10px; font-size: 14px; color: #555; }
+    #status {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .status-stopped {
+      color: red;
+    }
+    .status-capturing {
+      color: green;
+    }
+	#startBtn {
+            background-color: #28a745;
+            color: white;
+        }
+		#startBtn:disabled {
+            background-color: #b5e7a0;
+            cursor: not-allowed;
+        }
+		 #stopBtn{
+            background-color: #dc3545;
+            color: white;
+        }
+		#stopBtn:disabled {
+            background-color: #e0a7a7;
+            cursor: not-allowed;
+        }
+  </style>
+</head>
+<body>
+<center>
+<img src="logo.png" alt="Extension Logo" width="100" height="60" style="margin-bottom: 10px;" />
+ </center>
+  <div id="status">Status: <span id="statusValue" class="status-stopped">Stopped</span></div>
+  <button id="startBtn">Start Logs Capture</button>
+  <button id="stopBtn" disabled>Stop Logs Capture</button>
+  <div id="logSize">Log Size: 0.00 MB</div>
+  <script src="popup.js"></script>
+</body>
+</html>
